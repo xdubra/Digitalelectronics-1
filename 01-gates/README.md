@@ -13,14 +13,14 @@ begin
 
 end architecture dataflow;
 ```
-###Graph
+### Graph
 
 ![Screenshot od EDA Playground](images/Prve.png)
 
-###EDA playground link
+### EDA playground link
 https://www.edaplayground.com/x/TUGc
 
-###Table
+### Table
 | c | b |a | f(c,b,a) |
 | :-: | :-: | :-: | :-: |
 | 0 | 0 | 0 | 1 |
@@ -32,9 +32,9 @@ https://www.edaplayground.com/x/TUGc
 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 0 |
 
-##Verification of Distributive law
+## Verification of Distributive law
 
-###Source code
+### Source code
 ```vhdl
 architecture dataflow of gates is
 begin
@@ -45,9 +45,9 @@ begin
 
 end architecture dataflow;
 ```
-###Graph
+### Graph
 
 ![Screenshot od EDA Playground](images/Druhe.png)
 
-###EDA playground link
+### EDA playground link
 https://www.edaplayground.com/x/ckf4
