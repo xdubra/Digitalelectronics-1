@@ -15,7 +15,7 @@ end architecture dataflow;
 ```
 ###Graph
 
-![Screenshot od EDA Playground](Images/Prve.png)
+![Screenshot od EDA Playground](images/Prve.png)
 
 ###EDA playground link
 https://www.edaplayground.com/x/TUGc
@@ -47,7 +47,7 @@ end architecture dataflow;
 ```
 ###Graph
 
-![Screenshot od EDA Playground](Images/Druhe.png)
+![Screenshot od EDA Playground](images/Druhe.png)
 
 ###EDA playground link
 https://www.edaplayground.com/x/ckf4
