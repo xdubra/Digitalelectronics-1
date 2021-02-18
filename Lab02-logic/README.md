@@ -38,8 +38,6 @@ https://github.com/xdubra/Digitalelectronics-1
 ```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
-
-
 entity comparator_4bit is
     port(
         a_i           : in  std_logic_vector(2 - 1 downto 0);
@@ -50,7 +48,6 @@ entity comparator_4bit is
         B_less_A_o    : out std_logic       -- B is less than A
     );
 end entity comparator_4bit;
-
 architecture Behavioral of comparator_4bit is
 begin
     B_less_A_o   <= '1' when (b_i < a_i) else '0';
