@@ -35,6 +35,7 @@ https://github.com/xdubra/Digitalelectronics-1
 ## A 4-bit binary comparator. Submit
 
 ### VHDL architecture from design file
+```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -57,4 +58,4 @@ begin
     B_equals_A_o    <= '1' when (b_i = a_i) else '0';
 
 end architecture Behavioral;
-
+```
