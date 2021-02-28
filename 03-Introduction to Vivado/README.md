@@ -89,5 +89,23 @@ end architecture testbench;
 4. Napíšeme názov projektu, zadáme lokáciu uloženia a klikneme "Next>"
 5. Necháme zakliknute _RTL Project a klikneme "Next >"
 
+### Adding source file
+1. Klikneme "Create File", file type zvolíme "VHDL" a pomenujeme file name, názov musí byt rovnaký ako project name
+2. Klikneme "OK" a "Next >"
+3. Klikneme "Next >"
+4. Klikneme "Boards" a označime napríklad "Nexys A7-50T"
+5. Klikneme "Next >"
+6. Klikneme "Finish"
+7. Klikneme "OK" and "Yes"
 
+### Adding testbench file
+1. Pod "Sources", otvoríme "Simulation Sources"
+2. Pravim kliknutím na zložku "sim_1" a označime "Add Sources..."
+3. Klikneme "Next >"
+4. Klikneme "Create File", musí byt "VHDL" a napíšeme názov ktorý ale začina "tb_" 
+5. Klikneme "OK"
+6. Klikneme "Finish"
+7. Klikneme "OK" and "Yes"
 
+### Running simulation
+1. V "Simulation" klikneme na "Run Simulation" a klikneme na "Run Behavioral Simultion"
