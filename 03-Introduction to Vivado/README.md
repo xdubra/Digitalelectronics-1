@@ -24,8 +24,8 @@ https://github.com/xdubra/Digitalelectronics-1
 | LED14 | V12 | SW14 | U11 |
 | LED15 | V11 | SW15 | V10 |
 
-##Two-bit wide 4-to-1 multiplexer
-###VHDL architecture
+## Two-bit wide 4-to-1 multiplexer
+### VHDL architecture
 
 ```vhdl
 architecture Behavioral of mux_2bit_4to1 is
@@ -38,7 +38,7 @@ begin
  
 end architecture Behavioral;
 ```
-###VHDL stimulus process
+### VHDL stimulus process
 
 ```vhdl
    p_stimulus : process
@@ -77,11 +77,11 @@ end architecture Behavioral;
 end architecture testbench;
 ```
 
-###Screenshot with simulated time waveforms
+### Screenshot with simulated time waveforms
 
 ![Screenshot od EDA Playground](image3/obrazok1.png)
 
-##A Vivado tutorial
+## A Vivado tutorial
 
 
 
