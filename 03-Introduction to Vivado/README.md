@@ -82,6 +82,12 @@ end architecture testbench;
 ![Screenshot od EDA Playground](image3/obrazok1.png)
 
 ## A Vivado tutorial
+### Project creation
+1. Otvoríme Vivado 2020.2
+2. File > Project > New
+3. Klikneme "Next >"
+4. Napíšeme názov projektu, zadáme lokáciu uloženia a klikneme "Next>"
+5. Necháme zakliknute _RTL Project a klikneme "Next >"
 
 
 
