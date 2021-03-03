@@ -28,7 +28,7 @@ https://github.com/xdubra/Digitalelectronics-1
 
 
 ## Seven-segment display decoder
-### Listing of VHDL architecture from source file hex_7seg.vhd
+### Listing of VHDL architecture from source file ```vhdl hex_7seg.vhd ```
 ```vhdl
 
 begin
@@ -69,7 +69,7 @@ begin
     end process p_7seg_decoder;
 
 ```
-### Listing of VHDL stimulus process from testbench file tb_hex_7seg.vhd
+### Listing of VHDL stimulus process from testbench file ```vhdl tb_hex_7seg.vhd ```
 ```vhdl
 
 begin
@@ -128,7 +128,7 @@ begin
 
 ![Screenshot od EDA Playground](image4/Druhe.png)
 
-### Listing of VHDL code from source file top.vhd
+### Listing of VHDL code from source ```vhdl file top.vhd ```
 ```vhdl
 begin
   hex2seg : entity work.hex_7seg
