@@ -99,7 +99,7 @@ https://github.com/xdubra/Digitalelectronics-1
 ```
 
 ### Screenshot with simulated time waveforms
-![Screenshot od EDA Playground](image5/Druhe.png)
+![Screenshot od EDA Playground](image5/Druhe..png)
 
 ## Top level
 ### Listing of VHDL code from source file ``` top.vhd ``` with all instantiations for the 4-bit bidirectional counte
