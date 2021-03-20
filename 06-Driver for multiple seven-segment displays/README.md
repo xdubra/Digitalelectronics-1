@@ -172,7 +172,13 @@ begin
         s_data0  <=  "0010";
         
         s_dp_i   <=  "0111";
+
+          wait for 350 ns;
         
+        s_data3  <=  "0001";
+        s_data2  <=  "0000";
+        s_data1  <=  "0001";
+        s_data0  <=  "0000";
         
         report "Stimulus process finished" severity note;
         wait;
@@ -183,6 +189,8 @@ end architecture testbench;
 
 ### Screenshot with simulated time waveforms
 ![Screenshot od EDA Playground](image6/Druhe.png)
+![Screenshot od EDA Playground](image6/Stvrte.png)
+
 
 ### Listing of VHDL architecture of the top layer
 ```vhdl
