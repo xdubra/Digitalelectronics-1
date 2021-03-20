@@ -240,4 +240,4 @@ end architecture Behavioral;
 ## Eight-digit driver
 ### Image of the driver schematic
 
-![Screenshot od EDA Playground](image6/Tretie.png)
+![Screenshot od EDA Playground](image6/Tretie1.png)
