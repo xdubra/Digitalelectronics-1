@@ -188,7 +188,9 @@ end architecture testbench;
 ```
 
 ### Screenshot with simulated time waveforms
+
 ![Screenshot od EDA Playground](image6/Druhe.png)
+
 ![Screenshot od EDA Playground](image6/Stvrte.png)
 
 
