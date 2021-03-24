@@ -34,7 +34,7 @@ https://github.com/xdubra/Digitalelectronics-1
 
 ## D latch
 ### VHDL code listing of the process ``` p_d_latch ```
-
+```vhdl
 architecture Behavioral of d_latch is
 begin
 p_d_latch : process (d, arst, en)
@@ -51,6 +51,7 @@ begin
 end process p_d_latch;
 
 end Behavioral;
+```
 
 ### Listing of VHDL reset and stimulus processes from the testbench ``` tb_d_latch.vhd ```
 ```vhdl
