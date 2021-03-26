@@ -34,8 +34,7 @@ https://github.com/xdubra/Digitalelectronics-1
 ## D latch
 ### VHDL code listing of the process ``` p_d_latch ```
 ```vhdl
-architecture Behavioral of d_latch is
-begin
+
 p_d_latch : process (d, arst, en)
 begin
     if (arst = '1') then
@@ -49,12 +48,123 @@ begin
     end if;
 end process p_d_latch;
 
-end Behavioral;
 ```
 
 ### Listing of VHDL reset and stimulus processes from the testbench ``` tb_d_latch.vhd ```
 ```vhdl
+ p_reset_gen : process
+     begin
+         s_arst <= '0';
+         wait for 38 ns;
+         
+         -- Reset activated
+         s_arst <= '1';
+         wait for 53 ns;
 
+         --Reset deactivated
+         s_arst <= '0';
+        
+         wait for 80 ns;
+         s_arst <= '1';
+
+         wait;
+     end process p_reset_gen;
+
+    --------------------------------------------------------------------
+    -- Data generation process
+    --------------------------------------------------------------------
+    p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+        
+        s_d  <= '0';
+        s_en <= '0';
+        
+        --d sekv
+        wait for 10 ns;
+        s_d  <= '1';
+        wait for 10 ns;
+        s_d  <= '0';
+        wait for 10 ns;
+        s_d  <= '1';
+        wait for 10 ns;
+        s_d  <= '0';
+        wait for 5 ns;
+        
+        assert ((s_arst = '1') and (s_en = '0') and (s_q = '0') and (s_q_bar = '1'))
+        report "Test failed for reset high, en low when s_d = '0'" severity error;
+        
+        wait for 5 ns;
+        s_d  <= '1';
+        wait for 5 ns;
+        
+        assert ((s_arst = '1') and (s_en = '0') and (s_q = '0') and (s_q_bar = '1'))
+        report "Test failed for reset high, en low when s_d = '1'" severity error;
+        
+        wait for 5 ns;
+        s_d  <= '0';
+        --/d sekv
+        
+        s_en <= '1';
+        
+        --d sekv
+        wait for 10 ns;
+        s_d  <= '1';
+        wait for 5 ns;
+        
+        assert ((s_arst = '1') and (s_en = '1') and (s_q = '0') and (s_q_bar = '1'))
+        report "Test failed for reset high, en high when s_d = '1'" severity error;
+        
+        wait for 5 ns;
+        s_d  <= '0';
+        wait for 5 ns;
+        
+        assert ((s_arst = '1') and (s_en = '1') and (s_q = '0') and (s_q_bar = '1'))
+        report "Test failed for reset high, en high when s_d = '0'" severity error;          
+        
+        wait for 5 ns;
+        s_d  <= '1';
+        wait for 10 ns;
+        s_d  <= '0';
+        wait for 10 ns;
+        s_d  <= '1';
+        wait for 5 ns;
+        
+        assert ((s_arst = '0') and (s_en = '1') and (s_q = '1') and (s_q_bar = '0'))
+        report "Test failed for reset low, en high when s_d = '1'" severity error;
+        
+        wait for 15 ns;
+        s_d  <= '0';
+        wait for 5 ns;
+        
+        assert ((s_arst = '0') and (s_en = '1') and (s_q = '0') and (s_q_bar = '1'))
+        report "Test failed for reset low, en high when s_d = '0'" severity error;
+        
+        --/d sekv
+        
+        --d sekv
+        wait for 5 ns;
+        s_d  <= '1';
+        wait for 5 ns;
+        s_en <= '0';
+        wait for 5 ns;
+        s_d  <= '0';
+   
+        wait for 10 ns;
+        s_d  <= '1';
+        wait for 10 ns;
+        s_d  <= '0';
+        wait for 10 ns;
+        s_d  <= '1';
+        wait for 10 ns;
+        s_d  <= '0';
+        --/d sekv
+        
+        
+    
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
 ```
 ### Screenshot with simulated time waveforms
 ![Screenshot od EDA Playground](image7/Prve.png)
