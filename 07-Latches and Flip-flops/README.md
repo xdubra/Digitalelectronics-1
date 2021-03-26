@@ -192,7 +192,31 @@ end process p_d_latch;
 ```
 #### p_jk_ff_rst
 ```vhdl
+p_jk_ff_rst : process (clk)
+begin
+   if rising_edge(clk) then
+     if (rst ='1') then
+         s_q <= '0';
+     else
+        if (j = '0' and k= '0') then
+            s_q <= s_q;
+        elsif (j = '0' and k = '1') then
+            s_q <= '0';
+        elsif (j = '1' and k = '0') then
+            s_q <= '1';
+        elsif (j = '1' and k = '1') then
+            s_q <= not s_q;
+      
+        end if;    
+     end if; 
+   end if;
+end process p_jk_ff_rst;
 
+q <= s_q;
+q_bar <= not s_q;
+
+q <= s_q;
+q_bar <= not s_q;
 ```
 #### p_t_ff_rst
 ```vhdl
@@ -290,6 +314,71 @@ p_reset_gen : process
 ```
 #### tb_jk_ff_rst
 ```vhdl
+ p_reset_gen : process
+        begin
+            s_rst <= '0';
+            wait for 28 ns;
+            
+            -- Reset activated
+            s_rst <= '1';
+            wait for 13 ns;
+    
+            --Reset deactivated
+            s_rst <= '0';
+            
+            wait for 17 ns;
+            
+            s_rst <= '1';
+            wait for 33 ns;
+            
+            wait for 660 ns;
+            s_rst <= '1';
+    
+            wait;
+     end process p_reset_gen;
+
+    --------------------------------------------------------------------
+    -- Data generation process
+    --------------------------------------------------------------------
+    p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+        s_j  <= '0';
+        s_k  <= '0';
+        
+        --d sekv
+        wait for 37 ns;
+        s_j  <= '0';
+        s_k  <= '0';
+        wait for 3 ns;
+        s_j  <= '1';
+        s_k  <= '0';
+        wait for 7 ns;
+        s_j  <= '0';
+        s_k  <= '1';
+         wait for 14 ns;
+        s_j  <= '1';
+        s_k  <= '0';
+         wait for 7 ns;
+        s_j  <= '1';
+        s_k  <= '1';
+      
+        wait for 7 ns;      
+        s_j  <= '0';
+        s_k  <= '0';
+        wait for 7 ns;
+        s_j  <= '0';
+        s_k  <= '1';
+         wait for 7 ns;
+        s_j  <= '1';
+        s_k  <= '0';
+         wait for 7 ns;
+        s_j  <= '1';
+        s_k  <= '1';
+       
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
 
 ```
 #### tb_t_ff_rst
