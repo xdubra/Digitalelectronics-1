@@ -298,7 +298,7 @@ p_reset_gen : process
 ```
 ### Screenshot with simulated time waveforms
 #### p_d_ff_arst
-![Screenshot od EDA Playground](image7/Druhe
+![Screenshot od EDA Playground](image7/Druhe.png)
 #### p_d_ff_rst
 ![Screenshot od EDA Playground](image7/Tretie.png)
 
