@@ -582,10 +582,8 @@ p_reset_gen : process
 ![Screenshot od EDA Playground](image7/Druhe.png)
 #### p_d_ff_rst
 ![Screenshot od EDA Playground](image7/Tretie.png)
-
 #### p_jk_ff_rst
 ![Screenshot od EDA Playground](image7/Stvrte.png)
-
 #### p_t_ff_rst
 ![Screenshot od EDA Playground](image7/Piate.png)
 
@@ -593,7 +591,7 @@ p_reset_gen : process
 
 ## Shift register
 ### Image of the shift register schematic
-
+![Screenshot od EDA Playground](image7/Sieste.png)
 
 
 
