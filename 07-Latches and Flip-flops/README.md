@@ -6,30 +6,30 @@ https://github.com/xdubra/Digitalelectronics-1
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\begin{align*}&space;q_{n&plus;1}^{D}&space;=&space;&~&space;d&space;&\\&space;q_{n&plus;1}^{JK}&space;=&~&space;j\overline{q}_{n}\&space;&plus;\overline{k}\,q_{n}&space;&\\&space;q_{n&plus;1}^{T}&space;=&space;&~&space;t\overline{q}_{n}\&space;&plus;\overline{t}\,q_{n}&space;\end{align*}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\begin{align*}&space;q_{n&plus;1}^{D}&space;=&space;&~&space;d&space;&\\&space;q_{n&plus;1}^{JK}&space;=&~&space;j\overline{q}_{n}\&space;&plus;\overline{k}\,q_{n}&space;&\\&space;q_{n&plus;1}^{T}&space;=&space;&~&space;t\overline{q}_{n}\&space;&plus;\overline{t}\,q_{n}&space;\end{align*}" title="\begin{align*} q_{n+1}^{D} = &~ d &\\ q_{n+1}^{JK} =&~ j\overline{q}_{n}\ +\overline{k}\,q_{n} &\\ q_{n+1}^{T} = &~ t\overline{q}_{n}\ +\overline{t}\,q_{n} \end{align*}" /></a>
 
-| D | Qn | Q(n+1) | Comments |
-   | :-: | :-: | :-: | :-- |
-   | 0 | 0 | 0 | No change |
-   | 0 | 1 | 0 | Invert |
-   | 1 | 0 | 1 | Invert |
-   | 1 | 1 | 1 | No change |
-
-   | J | K | Qn | Q(n+1) | Comments |
+| **clk** | **d** | **q(n)** | **q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-: | :-- |
-   | 0 | 0 | 0 | 0 | No change |
-   | 0 | 0 | 1 | 1 | No change |
-   | 0 | 1 | 0 | 0 | Reset |
-   | 0 | 1 | 1 | 0 | Reset |
-   | 1 | 0 | 0 | 1 | Set |
-   | 1 | 0 | 1 | 1 | Set |
-   | 1 | 1 | 0 | 1 | Toggle |
-   | 1 | 1 | 1 | 0 | Toggle |
+   | ![rising](images/eq_uparrow.png) | 0 | 0 | 0 | Input signal is sampled at the rising edge of clk and stored to FF |
+   | ![rising](images/eq_uparrow.png) | 0 | 1 | 0 | Input signal is sampled at the rising edge of clk and stored to FF |
+   | ![rising](images/eq_uparrow.png) | 1 | 0 | 1 | Input signal is sampled at the rising edge of clk and stored to FF |
+   | ![rising](images/eq_uparrow.png) | 1 | 1 | 1 | Input signal is sampled at the rising edge of clk and stored to FF |
 
-   | T | Qn | Q(n+1) | Comments |
-   | :-: | :-: | :-: | :-- |
-   | 0 | 0 | 0 | No change |
-   | 0 | 1 | 1 | No change |
-   | 1 | 0 | 1 | Invert |
-   | 1 | 1 | 0 | Invert |
+   | **clk** | J | K | Qn | Q(n+1) | Comments |
+   | :-: | :-: | :-: | :-: | :-: | :-- |
+   | ![rising](images/eq_uparrow.png)  | 0 | 0 | 0 | 0 | No change |
+   | ![rising](images/eq_uparrow.png) | 0 | 0 | 1 | 1 | No change |
+   | ![rising](images/eq_uparrow.png) | 0 | 1 | 0 | 0 | Reset |
+   | ![rising](images/eq_uparrow.png) | 0 | 1 | 1 | 0 | Reset |
+   | ![rising](images/eq_uparrow.png) | 1 | 0 | 0 | 1 | Set |
+   | ![rising](images/eq_uparrow.png)  | 1 | 0 | 1 | 1 | Set |
+   | ![rising](images/eq_uparrow.png) | 1 | 1 | 0 | 1 | Toggle |
+   | ![rising](images/eq_uparrow.png) | 1 | 1 | 1 | 0 | Toggle |
+
+   | **clk** | T | Qn | Q(n+1) | Comments |
+   | :-: | :-: | :-: | :-: | :-- |
+   | ![rising](images/eq_uparrow.png) | 0 | 0 | 0 | No change |
+   | ![rising](images/eq_uparrow.png) | 0 | 1 | 1 | No change |
+   | ![rising](images/eq_uparrow.png) | 1 | 0 | 1 | Invert |
+   | ![rising](images/eq_uparrow.png) | 1 | 1 | 0 | Invert |
 
 ## D latch
 ### VHDL code listing of the process ``` p_d_latch ```
