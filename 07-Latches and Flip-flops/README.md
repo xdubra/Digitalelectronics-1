@@ -173,7 +173,7 @@ end process p_d_latch;
 ### VHDL code listing of the processes p_d_ff_arst, p_d_ff_rst, p_jk_ff_rst, p_t_ff_rst
 #### p_d_ff_arst
 ```vhdl
-p_d_latch : process (clk, arst)
+p_d_ff_arst : process (clk, arst)
 begin
     if (arst = '1') then
         q <= '0';
@@ -184,7 +184,7 @@ begin
         q <= d;
         q_bar <= not d;
     end if;
-end process p_d_latch;
+end process p_d_ff_arst;
 ```
 #### p_d_ff_rst
 ```vhdl
