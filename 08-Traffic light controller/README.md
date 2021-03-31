@@ -149,8 +149,8 @@ https://github.com/xdubra/Digitalelectronics-1
 ```
 
 ### Screenshots of the simulation
-![Screenshot od EDA Playground](image8/Sieste.png)
-![Screenshot od EDA Playground](image8/Sieste.png)
-![Screenshot od EDA Playground](image8/Sieste.png)
+![Screenshot od EDA Playground](image8/Druhe.png)
+![Screenshot od EDA Playground](image8/Tretie.png)
+![Screenshot od EDA Playground](image8/Stvrte.png)
 
 
