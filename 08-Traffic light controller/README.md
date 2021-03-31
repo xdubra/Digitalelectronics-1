@@ -24,6 +24,8 @@ https://github.com/xdubra/Digitalelectronics-1
 ## Traffic light controller
 ### State diagram
 
+![Screenshot od EDA Playground](image8/Piate.png)
+
 ### Listing of VHDL code of sequential process  ``` p_traffic_fsm ```
 ```vhdl
  p_traffic_fsm : process(clk)
