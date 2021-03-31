@@ -6,7 +6,7 @@ https://github.com/xdubra/Digitalelectronics-1
 
 | **Input P** | `0` | `0` | `1` | `1` | `0` | `1` | `0` | `1` | `1` | `1` | `1` | `0` | `0` | `1` | `1` | `1` |
 | :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| **Clock** | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) | ![rising](Images/eq_uparrow.png) |
+| **Clock** | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) |
 | **State** | A |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | **Output R** | `0` |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
