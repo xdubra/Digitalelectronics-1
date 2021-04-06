@@ -168,7 +168,71 @@ https://github.com/xdubra/Digitalelectronics-1
 ![Screenshot od EDA Playground](image8/Sieste.png)
 ### Listing of VHDL code of sequential process ``` p_smart_traffic_fsm ```
 ```vhdl
+p_smart_traffic_fsm : process(clk)
+    begin
+        if rising_edge(clk) then
+            if (reset = '1') then       -- Synchronous reset
+                s_state <= goS ;        -- Set initial state
+                s_cnt   <= c_ZERO;      -- Clear all bits
 
+            elsif (s_en = '1') then
+                -- Every 250 ms, CASE checks the value of the s_state 
+                -- variable and changes to the next state according 
+                -- to the delay value.
+                case s_state is
+
+                    when goS =>
+                        if (s_cnt < c_DELAY_3SEC) then
+                            s_cnt <= s_cnt + 1;
+                        elsif (west_i = '1') then
+                            -- Move to the next state
+                            s_state <= waitS;
+                            -- Reset local counter value
+                            s_cnt   <= c_ZERO;
+                        end if;
+
+                    when waitS =>
+                        -- WRITE YOUR CODE HERE
+                        if (s_cnt < c_DELAY_0p5SEC) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            -- Move to the next state
+                            s_state <= goW;
+                            -- Reset local counter value
+                            s_cnt   <= c_ZERO;
+                        end if;
+                    
+                    when goW =>
+                        if (s_cnt < c_DELAY_3SEC) then
+                            s_cnt <= s_cnt + 1;
+                        elsif (south_i = '1') then
+                            -- Move to the next state
+                            s_state <= waitW;
+                            -- Reset local counter value
+                            s_cnt   <= c_ZERO;
+                        end if;
+                        
+                    when waitW =>
+                        -- WRITE YOUR CODE HERE
+                        if (s_cnt < c_DELAY_0p5SEC) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            -- Move to the next state
+                            s_state <= goS;
+                            -- Reset local counter value
+                            s_cnt   <= c_ZERO;
+                        end if;
+                        
+                    -- It is a good programming practice to use the 
+                    -- OTHERS clause, even if all CASE choices have 
+                    -- been made. 
+                    when others =>
+                        s_state <= goS;
+
+                end case;
+            end if; -- Synchronous reset
+        end if; -- Rising edge
+    end process p_smart_traffic_fsm;
 ```
 
 
