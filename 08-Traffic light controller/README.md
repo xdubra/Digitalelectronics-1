@@ -7,8 +7,8 @@ https://github.com/xdubra/Digitalelectronics-1
 | **Input P** | `0` | `0` | `1` | `1` | `0` | `1` | `0` | `1` | `1` | `1` | `1` | `0` | `0` | `1` | `1` | `1` |
 | :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | **Clock** | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) | ![rising](image8/eq_uparrow.png) |
-| **State** | A | A | A | A | A | A | A | A | A | A | A | A | A | A | A | A |
-| **Output R** | `0` | `0` | `0` | `0` | `0` | `0` | `0` | `0` | `0` | `0` | `0` | `0` | `0` | `0` | `0` | `0` |
+| **State** | A | A | B | C | C | D | A | B | C | D | B | B | B | C | D | B |
+| **Output R** | `0` | `0` | `0` | `0` | `0` | `1` | `0` | `0` | `0` | `1` | `0` | `0` | `0` | `0` | `1` | `0` |
 
 
 ## Figure with connection of RGB LEDs on Nexys A7 board and completed table with color settings
@@ -154,5 +154,25 @@ https://github.com/xdubra/Digitalelectronics-1
 ![Screenshot od EDA Playground](image8/Druhe.png)
 ![Screenshot od EDA Playground](image8/Tretie.png)
 ![Screenshot od EDA Playground](image8/Stvrte.png)
+
+## Smart controller
+### State table
+| **Current state** | **Direction South** | **Direction West** | **Delay** | **No cars** | **Cars West** | **Cars South** | **Cars both directions** |
+| :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| `goS`   | green  | red    | at least 3 sec | `goS` | `waitS` | `goS` | `waitS` |
+| `waitS` | yellow | red    | 0.5 sec        | `goW` | `goW` | `goW` | `goW` |
+| `goW`   | red    | green  | at least 3 sec | `goW` | `goW` | `waitW` | `waitW` |
+| `waitW` | red    | yellow | 0.5 sec        | `goS` | `goS` | `goS` | `goS` |
+
+### State diagram
+![Screenshot od EDA Playground](image8/Sieste.png)
+### Listing of VHDL code of sequential process ``` p_smart_traffic_fsm ```
+```vhdl
+
+```
+
+
+
+
 
 
